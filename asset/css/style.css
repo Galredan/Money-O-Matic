@@ -1,3 +1,38 @@
 body{
-	background-color: rgba(178,20,0,1);
+	background-color: rgba(170,15,13,1.0);
+	background-image: url(../images/rideau.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#machine-rectangle{
+	background-color: rgba(206,206,206,1);
+	height: 30%;
+	width: 30%;
+	position: absolute;
+	top: 45%;
+	left: 35%;
+}
+
+#machine-top{
+	width: 30%;
+	height: 10%;
+	background: rgba(206,206,206,1);
+	-moz-border-radius: 90% 90% 0 0;
+	-webkit-border-radius: 90% 90% 0 0;
+	border-radius: 90% 90% 0 0;
+	position: absolute;
+	top: 34%;
+	left: 35%;
+	z-index: 1;
+}
+
+#machine-case{
+	background-color: white;
+	width: 22%;
+	height: 35%;
+	margin: 1%;
+	margin-top: 10%;
+	z-index: 10;
+	display: inline-block;
 }
