@@ -7,32 +7,36 @@ body{
 
 #machine-rectangle{
 	background-color: rgba(206,206,206,1);
-	height: 30%;
-	width: 30%;
-	position: absolute;
-	top: 45%;
-	left: 35%;
+	height: 25%;
+	width: 25%;
+	margin: auto;
 }
 
 #machine-top{
-	width: 30%;
-	height: 10%;
+	width: 25%;
+	height: 25%;
 	background: rgba(206,206,206,1);
-	-moz-border-radius: 90% 90% 0 0;
-	-webkit-border-radius: 90% 90% 0 0;
-	border-radius: 90% 90% 0 0;
-	position: absolute;
-	top: 34%;
-	left: 35%;
+	-webkit-border-top-left-radius: 500px;
+    -webkit-border-top-right-radius: 500px;
+    -moz-border-radius-topleft: 500px;
+    -moz-border-radius-topright: 500px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
 	z-index: 1;
+	margin: auto;
+	margin-top: 15%;
+	margin-bottom: 10px;
+
 }
+
 
 #machine-case{
 	background-color: white;
 	width: 22%;
-	height: 35%;
-	margin: 1%;
-	margin-top: 10%;
+	height: 55%;
+	margin-top: auto;
 	z-index: 10;
 	display: inline-block;
+	margin: auto;
+	margin-top: 15px;
 }
