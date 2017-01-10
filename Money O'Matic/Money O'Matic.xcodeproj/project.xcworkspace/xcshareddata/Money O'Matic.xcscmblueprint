@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2DC16A27EA2E768BEB7ED9F95C6DA24F265F67D4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2DC16A27EA2E768BEB7ED9F95C6DA24F265F67D4" : 9223372036854775807,
+    "1BB5F2D1969B52771BED667E5A23C4F53B02EBB9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B25E3A81-4CE4-4FAA-9143-28CA8B87B8F5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2DC16A27EA2E768BEB7ED9F95C6DA24F265F67D4" : "Money-O-Matic\/",
+    "1BB5F2D1969B52771BED667E5A23C4F53B02EBB9" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Money O'Matic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Money O'Matic\/Money O'Matic.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Galredan\/Money-O-Matic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BB5F2D1969B52771BED667E5A23C4F53B02EBB9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Galredan\/Money-O-Matic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2DC16A27EA2E768BEB7ED9F95C6DA24F265F67D4"
+    }
+  ]
+}

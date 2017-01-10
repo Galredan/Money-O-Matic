@@ -5,38 +5,33 @@ body{
 	background-size: cover;
 }
 
-#machine-rectangle{
-	background-color: rgba(206,206,206,1);
-	height: 25%;
-	width: 25%;
-	margin: auto;
-}
-
 #machine-top{
 	width: 25%;
 	height: 25%;
-	background: rgba(206,206,206,1);
+	background-color: rgba(206,206,206,1);
 	-webkit-border-top-left-radius: 500px;
     -webkit-border-top-right-radius: 500px;
     -moz-border-radius-topleft: 500px;
     -moz-border-radius-topright: 500px;
     border-top-left-radius: 500px;
     border-top-right-radius: 500px;
-	z-index: 1;
 	margin: auto;
 	margin-top: 15%;
 	margin-bottom: 10px;
 
 }
-
+#machine-rectangle{
+	background-color: rgba(206,206,206,1);
+	width: 25%;
+	height: 20%;
+	margin: auto;
+}
 
 #machine-case{
 	background-color: white;
-	width: 22%;
-	height: 55%;
-	margin-top: auto;
-	z-index: 10;
 	display: inline-block;
-	margin: auto;
-	margin-top: 15px;
+	width: 22%;
+	height: 70%;
+	margin: 0.5%;
+	margin-top: 3%;
 }
