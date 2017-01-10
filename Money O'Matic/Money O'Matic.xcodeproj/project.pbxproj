@@ -1,0 +1,67 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXGroup section */
+		8CF6F1D31E24D90200BD75F5 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		8CF6F1D41E24D90200BD75F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = 8CF6F1D71E24D90200BD75F5 /* Build configuration list for PBXProject "Money O'Matic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8CF6F1D31E24D90200BD75F5;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		8CF6F1D81E24D90200BD75F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8CF6F1D91E24D90200BD75F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CF6F1D71E24D90200BD75F5 /* Build configuration list for PBXProject "Money O'Matic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF6F1D81E24D90200BD75F5 /* Debug */,
+				8CF6F1D91E24D90200BD75F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CF6F1D41E24D90200BD75F5 /* Project object */;
+}
