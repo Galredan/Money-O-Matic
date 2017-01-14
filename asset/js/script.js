@@ -4,7 +4,7 @@ function machineASous () {
 	var modal = document.getElementById('myModal');
 	var gain = 0;
 	var i = 0;
-
+	var a;
 	while (i<5) {
 
 		setTimeout('randomImg(a,img_0)',1000);
