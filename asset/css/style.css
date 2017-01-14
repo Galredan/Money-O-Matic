@@ -5,6 +5,13 @@ body{
 	background-size: cover;
 }
 
+#popup{
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	display: block;
+	z-index: 10000000;
+}
 #machine-rectangle{
 	background-color: rgba(206,206,206,1);
 	height: 30%;
@@ -24,7 +31,7 @@ body{
 	position: absolute;
 	top: 34%;
 	left: 35%;
-	z-index: 1;
+	z-index: 10;
 }
 
 #machine-case{
@@ -33,6 +40,6 @@ body{
 	height: 35%;
 	margin: 1%;
 	margin-top: 10%;
-	z-index: 10;
+	z-index: 12;
 	display: inline-block;
 }

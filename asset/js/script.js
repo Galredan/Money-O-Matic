@@ -1,6 +1,7 @@
 function machineASous () {
 	var creditJoueur = document.getElementById("credit").innerHTML;
 	var highscore = document.getElementById("highscore").innerHTML;
+	var modal = document.getElementById('myModal');
 	var gain = 0;
 
 	var a = Math.floor(Math.random()*3);
@@ -15,20 +16,19 @@ function machineASous () {
 
 	creditJoueur -= 1 ; 
 
-	if (a==0 && b ==0 && c==0 && d==0){
-		gain = 0;
-		creditJoueur = 0 ;
-		document.getElementById("boutonGo").disabled = "disabled";
-	}
+
 	// SI 4 IDENTIQUE
-	else if (a==b && b==c && c==d){
+	if (a==b && b==c && c==d){
 		gain = 100;
-		creditJoueur +=100 ; 
+		creditJoueur +=100 ;
+		loadFrame();
+		//modal.style.display = "block";
 	}
 	// SI
 	else if (a==b ^ a==c ^ a==d ^ b==c ^ b==d ^ c==d ) {
 		gain = 15;
 		creditJoueur += 15 ;
+		loadFrame();
 	}
 	if (creditJoueur>highscore){
 		highscore = creditJoueur;
@@ -40,3 +40,10 @@ function machineASous () {
 	document.getElementById("highscore").innerHTML = highscore;
 	document.getElementById("gain").innerHTML = gain;
 }
+function loadFrame() {
+	var $iframe = $( '<div id="popup"><center><iframe id="popup" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://matias.ma/nsfw/" width="50%" height="50%" frameborder="0"></iframe></center></div>' );
+	$( "body" ).append($iframe);
+	setTimeout(function() {
+  		$('#popup').remove();
+	}, 10000);
+    }
