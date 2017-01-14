@@ -3,11 +3,14 @@ function machineASous () {
 	var highscore = document.getElementById("highscore").innerHTML;
 	var modal = document.getElementById('myModal');
 	var gain = 0;
-
+	var i = 0;
+	while (i<5) {
 	var a = Math.floor(Math.random()*3);
 	var	b = Math.floor(Math.random()*3);
 	var c = Math.floor(Math.random()*3); 
 	var d = Math.floor(Math.random()*3); 
+	i++;
+	}
 
 	document.getElementById("img_0").src ='img_' + a +'.jpg';
 	document.getElementById("img_1").src ='img_' + b +'.jpg';
@@ -22,13 +25,11 @@ function machineASous () {
 		gain = 100;
 		creditJoueur +=100 ;
 		loadFrame();
-		//modal.style.display = "block";
 	}
 	// SI
 	else if (a==b ^ a==c ^ a==d ^ b==c ^ b==d ^ c==d ) {
 		gain = 15;
 		creditJoueur += 15 ;
-		loadFrame();
 	}
 	if (creditJoueur>highscore){
 		highscore = creditJoueur;
