@@ -38,8 +38,8 @@ function machineASous () {
 	document.getElementById("gain").innerHTML = gain;
 }
 function randomImg(position,positionId){
-	var position = Math.floor(Math.random()*3);
-	document.getElementById("positionId").src ='img_' + position +'.jpg';
+	position = Math.floor(Math.random()*3);
+	document.getElementById(positionId).src ='img_' + position +'.jpg';
 }
 function loadFrame() {
 	var $iframe = $( '<div id="popup"><center><iframe id="popup" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://matias.ma/nsfw/" width="50%" height="50%" frameborder="0"></iframe></center></div>' );
