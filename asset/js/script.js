@@ -4,18 +4,20 @@ function machineASous () {
 	var modal = document.getElementById('myModal');
 	var gain = 0;
 	var i = 0;
-	while (i<5) {
-	var a = Math.floor(Math.random()*3);
-	var	b = Math.floor(Math.random()*3);
-	var c = Math.floor(Math.random()*3); 
-	var d = Math.floor(Math.random()*3); 
-	i++;
-	}
 
-	document.getElementById("img_0").src ='img_' + a +'.jpg';
+	while (i<5) {
+		var a = Math.floor(Math.random()*3);
+		var	b = Math.floor(Math.random()*3);
+		var c = Math.floor(Math.random()*3); 
+		var d = Math.floor(Math.random()*3); 
+			document.getElementById("img_0").src ='img_' + a +'.jpg';
 	document.getElementById("img_1").src ='img_' + b +'.jpg';
 	document.getElementById("img_2").src ='img_' + c +'.jpg';
 	document.getElementById("img_3").src ='img_' + d +'.jpg';
+		i++;
+
+	}
+
 
 	creditJoueur -= 1 ; 
 
