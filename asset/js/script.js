@@ -10,10 +10,10 @@ function machineASous() {
     var c = Math.floor(Math.random() * 3);
     var d = Math.floor(Math.random() * 3);
 
-    document.getElementById('img_0').src = 'img_' + a + '.jpg';
-    document.getElementById('img_1').src = 'img_' + b + '.jpg';
-    document.getElementById('img_2').src = 'img_' + c + '.jpg';
-    document.getElementById('img_3').src = 'img_' + d + '.jpg';
+    document.getElementById('img_0').src = 'asset/images/img_' + a + '.jpg';
+    document.getElementById('img_1').src = 'asset/images/img_' + b + '.jpg';
+    document.getElementById('img_2').src = 'asset/images/img_' + c + '.jpg';
+    document.getElementById('img_3').src = 'asset/images/img_' + d + '.jpg';
 
     creditJoueur -= 1;
 
