@@ -1,8 +1,11 @@
 function machineASous() {
+    $('#launch').addClass('hidden');
+    $('#wait').removeClass('hidden');
     var creditJoueur = document.getElementById("credit").innerHTML;
     var highscore = document.getElementById("highscore").innerHTML;
     var gain = 0;
-    var i = $('#partiesJouees').html;
+    var i = document.getElementById('partiesJouees').innerHTML;
+    i++;
 
     var a = Math.floor(Math.random() * 3);
     var b = Math.floor(Math.random() * 3);
@@ -16,42 +19,41 @@ function machineASous() {
 
     creditJoueur -= 1;
 
-    // SI 4 IDENTIQUE GAIN 100
-    if (a == b && b == c && c == d) {
+    if (a == b && b == c && c == d) { // SI 4 IDENTIQUES
         gain = 100;
         creditJoueur += 100;
         jackpot();
         loadFrame();
-    }
-    // SI 3 IDENTIQUE SUIVIS GAIN 10
-    else if ((a == b && b == c) || (b == c && c == d)) {
+    } else if ((a == b && b == c) || (b == c && c == d)) { // SI 3 IDENTIQUES CONSECUTIFS
         gain = 10;
         creditJoueur += 10;
         petitGain();
-    }
-
-    // SI 4 DIFFERENT
-    else if ((a != b) && (b = !c) && (c != d) && (a != c) && (a != d) && (b != d)) {
+    } else if ((a != b) && (b = !c) && (c != d) && (a != c) && (a != d) && (b != d)) { // SI 4 DIFFERENTS
         gain = 1;
         creditJoueur += 1;
+    } else {
+        setTimeout("$('#launch').removeClass('hidden');", 1000);
+        setTimeout("$('#wait').addClass('hidden');", 1000);
     }
     if (creditJoueur > highscore) {
         highscore = creditJoueur;
     }
 
     //console.log(gain);
-
+    document.getElementById('partiesJouees').innerHTML = i;
     document.getElementById("credit").innerHTML = creditJoueur;
     document.getElementById("highscore").innerHTML = highscore;
-    document.getElementById("gain").innerHTML = gain;
+    if (gain > 0) {
+        document.getElementById("gain").innerHTML = gain;
+        $('#gain').removeClass('hidden').addClass('tada');
+        setTimeout("$('#gain').addClass('hidden').removeClass('tada')", 2000);
+    }
 }
 
 function loadFrame() {
     var iframe = $('<div id="popup"><center><iframe id="popup" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://matias.ma/nsfw/" width="50%" height="50%" frameborder="0"></iframe></center></div>');
     $("body").append(iframe);
-    setTimeout(function() {
-        $('#popup').remove();
-    }, 10000);
+    setTimeout("$('#popup').remove()", 10000);
 }
 
 function jackpot() {
@@ -61,6 +63,8 @@ function jackpot() {
     setTimeout("$('#girl1').removeClass('fadeOutLeft').addClass('fadeInLeft');", 10000);
     setTimeout("$('#girl2').removeClass('fadeOutRight').addClass('fadeInRight');", 10000);
     setTimeout("$('#jackpot').removeClass('bounceInDown').addClass('bounceOutUp')", 10000);
+    setTimeout("$('#launch').removeClass('hidden');", 11000);
+    setTimeout("$('#wait').addClass('hidden');", 11000);
 }
 
 function petitGain() {
@@ -68,4 +72,6 @@ function petitGain() {
     $('#girl2').addClass('animated shake');
     setTimeout("$('#girl1').removeClass('animated shake');", 1500);
     setTimeout("$('#girl2').removeClass('animated shake');", 1500);
+    setTimeout("$('#launch').removeClass('hidden');", 1000);
+    setTimeout("$('#wait').addClass('hidden');", 1000);
 }

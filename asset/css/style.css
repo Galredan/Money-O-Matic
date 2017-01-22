@@ -15,7 +15,6 @@ body {
 
 #machine-rectangle {
     background-color: rgba(206, 206, 206, 1);
-    height: 30%;
     width: 30%;
     position: absolute;
     top: 45%;
@@ -49,7 +48,7 @@ body {
 .img_left {
     position: absolute;
     left: 10px;
-    bottom: -20px;
+    bottom: 0px;
     z-index: 1;
 }
 
