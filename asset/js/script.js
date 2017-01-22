@@ -31,6 +31,8 @@ function machineASous() {
     } else if ((a != b) && (b = !c) && (c != d) && (a != c) && (a != d) && (b != d)) { // SI 4 DIFFERENTS
         gain = 1;
         creditJoueur += 1;
+        setTimeout("$('#launch').removeClass('hidden');", 1000);
+        setTimeout("$('#wait').addClass('hidden');", 1000);
     } else {
         setTimeout("$('#launch').removeClass('hidden');", 1000);
         setTimeout("$('#wait').addClass('hidden');", 1000);
