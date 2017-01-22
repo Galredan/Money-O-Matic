@@ -20,7 +20,7 @@
         <img id="girl2" class="img_right" src="asset/images/fille2.png">
 
         <div id="machine-top">
-            <div id="gain"></div>
+            <div id="gain" class="text-center"></div>
         </div>
         <div id="machine-rectangle">
             <div id="machine-case"><img id="img_0" src="asset/images/img_0.jpg" style="width: 100%;" /></div>
@@ -28,9 +28,16 @@
             <div id="machine-case"><img id="img_2" src="asset/images/img_2.jpg" style="width: 100%;" /></div>
             <div id="machine-case"><img id="img_3" src="asset/images/img_3.jpg" style="width: 100%;" /></div>
             <button class="exercices" onclick="machineASous();" id="boutonGO">GO !</button>
-            <br /> credit :
-            <div id="credit">100</div>
-            <div id="highscore">100</div>
+            <div class="row">
+                <div class="col-md-6">
+                    credit :
+                    <div id="credit">100</div>
+                </div>
+                <div class="col-md-6">
+                    highscore :
+                    <div id="highscore">100</div>
+                </div>
+            </div>
         </div>
         <div id="myModal" class="modal">
 
@@ -41,7 +48,14 @@
 
         </div>
     </div>
-
+    <script>
+        // fonction pour assimiler la spacebar au bouton GO
+        $('body').keyup(function(e) {
+            if (e.keyCode == 32) {
+                machineASous();
+            }
+        });
+    </script>
 </body>
 
 </html>

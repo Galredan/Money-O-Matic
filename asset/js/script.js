@@ -1,9 +1,8 @@
 function machineASous() {
     var creditJoueur = document.getElementById("credit").innerHTML;
     var highscore = document.getElementById("highscore").innerHTML;
-    var modal = document.getElementById('myModal');
     var gain = 0;
-    var i = 0;
+    var i = $('#partiesJouees').html;
 
     var a = Math.floor(Math.random() * 3);
     var b = Math.floor(Math.random() * 3);
@@ -22,7 +21,6 @@ function machineASous() {
         gain = 100;
         creditJoueur += 100;
         jackpot();
-
         loadFrame();
     }
     // SI 3 IDENTIQUE SUIVIS GAIN 10
@@ -49,19 +47,19 @@ function machineASous() {
 }
 
 function loadFrame() {
-    var $iframe = $('<div id="popup"><center><iframe id="popup" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://matias.ma/nsfw/" width="50%" height="50%" frameborder="0"></iframe></center></div>');
-    $("body").append($iframe);
+    var iframe = $('<div id="popup"><center><iframe id="popup" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://matias.ma/nsfw/" width="50%" height="50%" frameborder="0"></iframe></center></div>');
+    $("body").append(iframe);
     setTimeout(function() {
         $('#popup').remove();
     }, 10000);
 }
 
 function jackpot() {
-    $('#girl1').addClass('animated pulse');
-    $('#girl2').addClass('animated pulse');
+    $('#girl1').addClass('animated fadeOutLeft');
+    $('#girl2').addClass('animated fadeOutRight');
     $('#jackpot').removeClass('bounceOutUp hidden').addClass('bounceInDown');
-    setTimeout("$('#girl1').removeClass('animated pulse');", 1500);
-    setTimeout("$('#girl2').removeClass('animated pulse');", 1500);
+    setTimeout("$('#girl1').removeClass('fadeOutLeft').addClass('fadeInLeft');", 10000);
+    setTimeout("$('#girl2').removeClass('fadeOutRight').addClass('fadeInRight');", 10000);
     setTimeout("$('#jackpot').removeClass('bounceInDown').addClass('bounceOutUp')", 10000);
 }
 

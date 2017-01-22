@@ -20,6 +20,7 @@ body {
     position: absolute;
     top: 45%;
     left: 35%;
+    z-index: 10;
 }
 
 #machine-top {
@@ -49,15 +50,18 @@ body {
     position: absolute;
     left: 10px;
     bottom: -20px;
+    z-index: 1;
 }
 
 .img_right {
     position: absolute;
     right: 10px;
     bottom: 0px;
+    z-index: 1;
 }
 
 .img_top {
     display: block;
     margin: 0 auto;
+    z-index: 0;
 }
