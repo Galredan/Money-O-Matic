@@ -11,7 +11,6 @@ function machineASous() {
     var b = Math.floor(Math.random() * 3);
     var c = Math.floor(Math.random() * 3);
     var d = Math.floor(Math.random() * 3);
-
     document.getElementById('img_0').src = 'asset/images/img_' + a + '.jpg';
     document.getElementById('img_1').src = 'asset/images/img_' + b + '.jpg';
     document.getElementById('img_2').src = 'asset/images/img_' + c + '.jpg';
@@ -22,15 +21,19 @@ function machineASous() {
     if (a == b && b == c && c == d) { // SI 4 IDENTIQUES
         gain = 100;
         creditJoueur += 100;
-        jackpot();
-        loadFrame();
+        setTimeout('jackpot()', 1000);
+        setTimeout('loadFrame()', 1000);
     } else if ((a == b && b == c) || (b == c && c == d)) { // SI 3 IDENTIQUES CONSECUTIFS
         gain = 10;
         creditJoueur += 10;
         petitGain();
-    } else if ((a != b) && (b = !c) && (c != d) && (a != c) && (a != d) && (b != d)) { // SI 4 DIFFERENTS
-        gain = 1;
-        creditJoueur += 1;
+    } else if ((a == b) && (d == c)) { // SI 2 ET 2
+        gain = 10;
+        creditJoueur += 10;
+        petitGain();
+    } else if ((a != b) && (a != c) && (a != d) && (b != c) && (b != d) && (c != d)) { // SI 4 DIFFERENTS
+        gain = -10;
+        creditJoueur -= 10;
         setTimeout("$('#launch').removeClass('hidden');", 1000);
         setTimeout("$('#wait').addClass('hidden');", 1000);
     } else {
@@ -61,12 +64,17 @@ function loadFrame() {
 function jackpot() {
     $('#girl1').addClass('animated fadeOutLeft');
     $('#girl2').addClass('animated fadeOutRight');
+    $('#popupgirl').addClass('fadeInUp').removeClass('hidden');
     $('#jackpot').removeClass('bounceOutUp hidden').addClass('bounceInDown');
     setTimeout("$('#girl1').removeClass('fadeOutLeft').addClass('fadeInLeft');", 10000);
     setTimeout("$('#girl2').removeClass('fadeOutRight').addClass('fadeInRight');", 10000);
     setTimeout("$('#jackpot').removeClass('bounceInDown').addClass('bounceOutUp')", 10000);
+    setTimeout("$('#popupgirl').removeClass('fadeInDown').addClass('fadeOutDown');", 10000);
     setTimeout("$('#launch').removeClass('hidden');", 11000);
     setTimeout("$('#wait').addClass('hidden');", 11000);
+    setTimeout("$('#popupgirl').removeClass('fadeOutDown').addClass('hidden');", 12000);
+    setTimeout("$('#girl1').removeClass('animated fadeInLeft')", 11500);
+    setTimeout("$('#girl2').removeClass('animated fadeInRight')", 11500);
 }
 
 function petitGain() {

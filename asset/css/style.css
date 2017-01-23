@@ -1,3 +1,7 @@
+html {
+    overflow-y: hidden;
+}
+
 body {
     background-color: rgba(170, 15, 13, 1.0);
     background-image: url(../images/rideau.png);
@@ -63,4 +67,12 @@ body {
     display: block;
     margin: 0 auto;
     z-index: 0;
+}
+
+.img_popup {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    z-index: 100;
 }
