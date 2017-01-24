@@ -34,12 +34,12 @@ function machineASous() {
         setTimeout('loadFrame()', 1000);
     }
     /*else if ((a == b && b == c) || (b == c && c == d)) { // SI 3 IDENTIQUES CONSECUTIFS
-           gain = 10;
-           creditJoueur += 10;
+           gain = 3;
+           creditJoueur += 3;
            petitGain();
        } else if ((a == b) && (d == c)) { // SI 2 ET 2
-           gain = 10;
-           creditJoueur += 10;
+           gain = 2;
+           creditJoueur += 2;
            petitGain();
        } else if ((a != b) && (a != c) && (a != d) && (b != c) && (b != d) && (c != d)) { // SI 4 DIFFERENTS
            gain = -10;
